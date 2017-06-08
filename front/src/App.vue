@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     Hello there : {{ msg }}
-
+    <hr>
+    <article v-for="article in articles">
+      {{ article.content }}
+    </article>
   </div>
 </template>
 
@@ -13,18 +16,23 @@ export default {
   name: 'app',
   data () {
     return {
+      author: '',
       msg: 'Welcome to Your Vue.js App',
-      post: null
+      articles: []
     }
   },
   created() {
-    axios.get('http://localhost:8000/articles/1').then((res) => {
-      this.post = res.data
+    axios.get('http://localhost:8000/articles').then((res) => {
+      this.articles = res.data.data
     })
-  }
+  },
 }
 </script>
 
 <style>
-
+  article {
+    font-family: Verdana;
+    box-shadow: 3px 5px 5px 1px#999;
+    padding: 10px;
+  }
 </style>

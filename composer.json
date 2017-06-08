@@ -31,7 +31,8 @@
         "friendsofsymfony/rest-bundle": "^2.1",
         "white-october/pagerfanta-bundle": "^1.0",
         "willdurand/hateoas-bundle": "^1.2",
-        "csa/guzzle-bundle": "^2.2"
+        "csa/guzzle-bundle": "^2.2",
+        "nelmio/cors-bundle": "^1.5"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
