@@ -16,7 +16,7 @@ use Hateoas\Representation\PaginatedRepresentation;
 class ArticleController extends FOSRestController
 {
     /**
-     * @Rest\Get("/articles", name="app_article_list")
+     * @Rest\Get("/api/articles", name="app_article_list")
      * @Rest\QueryParam(
      *     name="keyword",
      *     requirements="[a-zA-Z0-9]",
@@ -69,7 +69,7 @@ class ArticleController extends FOSRestController
     }
 
     /**
-     * @Rest\Post("/articles")
+     * @Rest\Post("/api/articles")
      * @Rest\View(StatusCode = 201)
      * @ParamConverter("article", converter="fos_rest.request_body")
      */
